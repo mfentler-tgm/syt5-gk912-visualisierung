@@ -79,6 +79,24 @@ Um diese Regler in der Applikation zu verwenden muss man ihnen auch eine Variabl
 Als letzte Einstellung wird beim Schieberegler noch das Kästchen "zum Klick springen" aktiviert, da man so die Userbility des Programms steigern kann.
 
 #### Eingabefeld
+Für das Eingabefeld wird ein __"unsichtbares Eingabefeld"__
+ausgewählt. Man kann das leider nicht auf visible setzen.
+
+In diesem Feld wird die Eigenschaft "OnClick" konfiguriert. Dort wählt man folgende Optionen:
+<center>
+
+![OnClickEingabe](images/onClickEingabe.png)
+</center>
+
+__WICHTIG:__  
+Man muss eine Variable zur Bearbeitung eingeben (diese wird zuerst auch noch im Programm deklariert). Ansonsten funktioniert es nicht. Um dann im laufenden Programm eine Eingabe zu machen klickt man in das Textfeld und gibt einen Wert zwischen Min(50) und Max(500) ein.  
+Wenn der Wert größer oder kleiner ist, dann kann die Eingabe nicht gesetzt werden.  
+
+Das kann dann so aussehen:
+<center>
+
+![Visualisierung Eingaben](images/visualisierungEingaben.png)
+</center>
 
 ### Task4
 ### Task5
