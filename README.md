@@ -99,5 +99,9 @@ Das kann dann so aussehen:
 </center>
 
 ### Task4
+_Der aktuelle Füllstand soll über ein Zeigerinstrument visualisiert werden (0 – Tankkapazität in l). Passe nun das Projekt so an, dass der aktuelle Füllstand korrekt aktualisiert wird, wenn Einlauf- und Entleerungsventile geöffnet/geschlossen werden._  
+_Es darf idealisiert angenommen werden, dass die Ventile unmittelbar (in einem Zyklus) den Durchfluss beeinflussen (100% → 0 und umgekehrt)._
+
+Das Zeigerelement ist unter dem Reiter "Messgeräte" zu finden. Als Skala-Maximum wählt man die Variable für den Maximalinhalt des Tanks, die wir vorher erstellt haben.
 ### Task5
 ### Task6
