@@ -13,8 +13,48 @@ Teste Programm und Visualisierung nach jeder Teilaufgabe ausführlich auf korrek
 Entscheide an welcher Stelle des Projektes Programmänderungen sinnvoll unterzubringen sind und begründe deine Entscheidung im Protokoll.
 
 ## Aufgabendurchführung
+#### Visualisierungen erstellen
+Um eine Visualisierung zu erstellen -> __Rechte Maustaste__ auf __Application__ -> __Objekt hinzufügen__ -> __Visualisierung__.  
+Daraufhin muss man einen Namen vergeben und das Visualisierungsfenster wird geöffnet. (Objektbibliotheken auf aktiv setzen)
+
 ### Task1
+_Erzeuge eine Visualisierung mit drei Schaltergrafiken für S1,S2,S3 und einer gelben Signallampe für V5. Diese soll leuchten, wenn V5 geöffnet ist und nicht leuchten wenn V5 geschlossen ist._  
+_Die Visualisierungen sollen für einen Bildschirm mit 1024x768px gestaltet werden und „selbsterklärend“ sein, d.h. Gestaltung und Beschriftungen sollen dem Anwender des HMI helfen die Tankanlage einfach bedienen zu können._
+
+Die Größe der Visualisierung lässt sich mit einem Doppelklick auf "TargetVisu" und dann unter den Skalierungsoptionen einstellen.  
+
+Um die Aufgabe zu lösen werden 3 Kippschalter aus der Bibliothek auf der rechten Seite gewählt (Lampen/Schalter/Bilder Section). In den Einstellungen wählt man dann als __Variable__ die Variable s1, für den Schalter, aus dem Programm aus.
+
+<center>
+
+![Schalter einstellungen](images/schalter_einst.PNG)
+</center>
+Nach dem man die 3 Schalter und die LED für die Visualisierung des Ventil5 gesetzt hat und man die Applikation dann ausführt, kann man sehen, dass die LED leuchtet sobald man den Schalter umschaltet.  
+<center>
+
+![Schaltung1 visualisiert](images/erg_vis1.png)
+</center>
+
 ### Task2
+_Erweitere die Visualisierung um einen Taster, der den Sensor S7 (Überlauf) simulieren soll,  sowie um ein Standardisiertes Ventilsymbol für V9 (Einlaufventil), das bei geöffnetem Ventil grün und bei geschlossenem Ventil weiß angezeigt wird (Rand ist immer schwarz)._
+
+Dazu wählt man aus der Objektbibliothek (siehe Bild) einen Taster aus. Diesem weist man die Überlaufssensorvariable s7 zu.  
+
+__Damit das funktioniert__ muss zuerst der Code aus dem strukturierten Text File von der Vorübung entfernt werden. Denn dieser überprüft ob die Maximalwasserhöhe erreicht ist und setzt die Variable dementsprechend. 
+<center>
+
+![Toolbox](images/toolbox.png)
+</center>
+
+Als Symbol für das Einlaufventil V9 wird ein Polygon verwendet, das im __aktiven__ Zustand __grün__ und im __passiven__ Zustand __weiß__ gefüllt sein soll. Der Rand soll immer Schwarz sein. (alle 8 Sekunden für 5 Sekunden aktiv außer Überlaufsensor s7 aktiv)  
+
+Dem Polygon weißt man die Variable unter "__Filter/Eingabe__"  und die Farben über "__Filter/Farben__" zu.
+
+<center>
+
+![Visualisierung 2](images/visual2.png)
+</center>
+
 ### Task3
 ### Task4
 ### Task5
