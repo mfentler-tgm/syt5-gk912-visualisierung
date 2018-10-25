@@ -56,6 +56,30 @@ Dem Polygon weißt man die Variable unter "__Filter/Eingabe__"  und die Farben �
 </center>
 
 ### Task3
+_Um den Füllstand des Tanks zu visualisieren müssen im Projekt Kenngrößen nachgerüstet werden. Diese sollen sich in der Visualisierung bearbeiten lassen:_  
+
+- __die Tankkapazität (in l):__  
+einstellbar mit Eingabefeld zwischen 50 und 500 l  
+- __die Füllgeschwindigkeit (in l/s):__  
+einstellbar mit Schieberegler zwischen 10 und 40 l/s  
+- __die Entleerungsgeschwindigkeit (in l/s):__  
+einstellbar mit Schieberegler zwischen 8 und 20 l/s  
+
+Für diesen Task müssen ein Eingabefeld und zwei Schieberegler zur HMI hinzugefügt werden. Diese findet man unter den allgemeinen Steuerelementen (unsichtbare Eingabe und Schieberegler)  
+
+#### Schieberegler
+Bei den Schiebereglern kann man den Skalabegin und das Skalaende in den Einstellungen festlegen. Weiters kann man auch Einstellen, dass die Skala angezeigt wird.  
+Die Regler können dann so aussehen:  
+<center>
+
+![Schieberegler](images/schieberegler.png)
+</center>
+
+Um diese Regler in der Applikation zu verwenden muss man ihnen auch eine Variable zuweisen. Diese Variable wird im "FillTank" Programm hinzugefügt.  
+Als letzte Einstellung wird beim Schieberegler noch das Kästchen "zum Klick springen" aktiviert, da man so die Userbility des Programms steigern kann.
+
+#### Eingabefeld
+
 ### Task4
 ### Task5
 ### Task6
