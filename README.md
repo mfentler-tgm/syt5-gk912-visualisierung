@@ -113,3 +113,7 @@ Weiters kann man sich mit den Einstellungen von dem Zeigerelement spielen und au
 
 ### Task5
 ### Task6
+
+## Quellen
+[1] https://infosys.beckhoff.com/index.php?content=../content/1031/tcplccontrol/html/tcplcctrl_iec_operators_overview.htm&id=8653966830076413975  
+[2] https://infosys.beckhoff.de/index.php?content=../content/1031/tcplccontrol/html/tcplcctrl_languages%20st.htm&id=5754912264349492758  
