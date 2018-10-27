@@ -103,5 +103,13 @@ _Der aktuelle Füllstand soll über ein Zeigerinstrument visualisiert werden (0 
 _Es darf idealisiert angenommen werden, dass die Ventile unmittelbar (in einem Zyklus) den Durchfluss beeinflussen (100% → 0 und umgekehrt)._
 
 Das Zeigerelement ist unter dem Reiter "Messgeräte" zu finden. Als Skala-Maximum wählt man die Variable für den Maximalinhalt des Tanks, die wir vorher erstellt haben.
+
+Bei diesem Element gibt es die Option __"Variable"__ nicht. Stattdessen wird hier die Option __"Wert"__ verwendet. Dort gibt man eine Variable für den aktuellen Tankinhalt an, der dann durch den Zeiger visualisiert wird.  
+Weiters kann man sich mit den Einstellungen von dem Zeigerelement spielen und auch dem __Maximum__ die Variable geben, die man im Eingabefeld "Tankkapazität" eingegeben hat.
+<center>  
+
+![Zeiger Einstellungen](images/zeiger.png)
+</center>
+
 ### Task5
 ### Task6
