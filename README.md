@@ -111,7 +111,10 @@ Weiters kann man sich mit den Einstellungen von dem Zeigerelement spielen und au
 ![Zeiger Einstellungen](images/zeiger.png)
 </center>
 
+Weiters wird eine neues Programm (Strukturierter Text eingefügt). In dieser Anwendung wird die eigentliche Tankbefüllung gemacht. 
+
 ### Task5
+_Um den Überlauf zu simulieren, wird ein zweites „Überlaufsignal“ S8 eingeführt, das dann aktiviert wird, wenn der Tank zu 95% voll ist. Ein Überlauf wird signalisiert, wenn S7 (durch Taster simuliert) oder S8 melden. Ein Überlauf soll durch eine rote Signallampe visualisiert werden._
 ### Task6
 
 ## Quellen
