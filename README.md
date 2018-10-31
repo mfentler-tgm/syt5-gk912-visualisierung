@@ -181,6 +181,26 @@ Bei der wird dann der aktuelle Tankinhalt in relation zum maximalen Inhalt berec
     END_IF
 
 ### Task6
+_Stelle den Tank visuell dar. Die Darstellung soll zu jedem Zeitpunkt den aktuellen Füllstand des Tanks grafisch maßstabsgetreu proportional wiedergeben. Befüllung und Entleerung sollen ebenso visuell ansprechend sichtbar gemacht werden._
+
+Um den Tankinhalt zu visualisieren werden zwei Rechtecke verwendet. Das eine, mit einer blauen Füllfarbe, die die Flüssigkeit im Tank realisieren soll.  
+Den beiden Rechtecken wird ein Y-Wert für die Relative Bewegung zugewiesen.
+
+- Rechteck 1: Y = __-__ maximaler Tankinhalt
+- Rechteck 2: Y = __-___ aktueller Tankinhalt
+
+Dabei ist zu beachten, dass die Werte negiert werden müssen wie man oben entnehmen kann. Das muss man machen, damit das Rechteck nach oben und nicht nach unten "wächst".  
+<center>
+
+![Rechteck Einstellungen](images/rechteck.png)
+</center>
+
+### Ergebnis
+Die fertige Visualisierung kann dann so aussehen:  
+<center>
+
+![Visualisierung fertig](images/visFertig.png)
+</center>
 
 ## Quellen
 [1] https://infosys.beckhoff.com/index.php?content=../content/1031/tcplccontrol/html/tcplcctrl_iec_operators_overview.htm&id=8653966830076413975  
