@@ -111,10 +111,75 @@ Weiters kann man sich mit den Einstellungen von dem Zeigerelement spielen und au
 ![Zeiger Einstellungen](images/zeiger.png)
 </center>
 
-Weiters wird eine neues Programm (Strukturierter Text eingefügt). In dieser Anwendung wird die eigentliche Tankbefüllung gemacht. 
+Weiters wird eine neues Programm (Strukturierter Text eingefügt). In dieser Anwendung wird die eigentliche Tankbefüllung gemacht.  
+
+#### Task4 - Programmierung
+Zunächst muss ein Timer eingebaut werden, der als Trigger zum Befüllen/Entleeren des Tanks wirkt. Dieser schaltet alle 100ms auf True.  
+Dieser Timer wird in ein neues Netzwerk eingefügt (siehe Bild).
+<center>
+
+![Bild Timer](images/timer.PNG)
+</center>  
+
+Desweiteren wird ein __neues Programm__ mit der Programmiersprache "Stukturierter Text" eingefügt. In diesem werden die Ventile überprüft und gegebenenfalls der __Tank befüllt/entleert oder beides gleichzeitig__.
+
+__Variablen des Programms:__
+
+    PROGRAM TankManager
+    VAR
+        ventil9 : BOOL;
+        ventil5 : BOOL;
+        fillTankTimer : BOOL;
+        
+        maxTank : INT := 250;
+        fuellGeschwindigkeit : REAL := 10;
+        entleerGeschwindigkeit: REAL := 8;
+        aktuellerTankInhalt : REAL := 0;
+    END_VAR 
+
+__Variablenzuweisung:__
+
+    ventil9 := Programm3_FillTank.v9;
+    ventil5 := Programm4_EigenerFUP.Ventil5;
+    fillTankTimer := Programm3_FillTank.fillTankTrigger;
+__Syntax:__  
+
+    //Wenn nur das Einlaufventil(v9) geöffnet ist
+    IF (ventil9 = TRUE AND fillTankTimer = TRUE AND NOT ventil5 = TRUE) THEN
+        aktuellerTankInhalt := aktuellerTankInhalt + fuellGeschwindigkeit;
+    ELSIF (ventil9 = TRUE AND ventil5 = TRUE AND fillTankTimer = TRUE) THEN
+        IF (aktuellerTankinhalt + fuellGeschwindigkeit - entleerGeschwindigkeit < 0) THEN
+            //Weniger als 0 geht nicht
+            aktuellerTankInhalt := 0;
+        ELSE
+            aktuellerTankInhalt := aktuellerTankinhalt + fuellGeschwindigkeit - entleerGeschwindigkeit;
+        END_IF
+    ELSIF (ventil5 = TRUE AND fillTankTimer = TRUE AND NOT ventil9 = TRUE) THEN
+        IF ((aktuellerTankinhalt - entleerGeschwindigkeit) < 0) THEN
+            aktuellerTankinhalt := 0;
+        ELSE
+            aktuellerTankinhalt := aktuellerTankinhalt - entleerGeschwindigkeit;
+        END_IF
+    END_IF
 
 ### Task5
 _Um den Überlauf zu simulieren, wird ein zweites „Überlaufsignal“ S8 eingeführt, das dann aktiviert wird, wenn der Tank zu 95% voll ist. Ein Überlauf wird signalisiert, wenn S7 (durch Taster simuliert) oder S8 melden. Ein Überlauf soll durch eine rote Signallampe visualisiert werden._
+
+Dazu wird eine neue rote Lampe in die Visualisierung eingebaut. Diese bekommt als Variable "S8" für den Überlauf.  
+Bei der wird dann der aktuelle Tankinhalt in relation zum maximalen Inhalt berechnet. Wenn das mehr als 95% sind oder s7 true ist, dann Leuchtet die Lampe.
+
+    IF(aktuellerTankInhalt >= maxTank/100*95) THEN
+        s8 := TRUE;
+    ELSE
+        s8 := FALSE;
+    END_IF
+
+    IF(s8 = TRUE OR gvl.s7 = TRUE) THEN
+        ueberlaufLampe := TRUE;
+    ELSE
+        ueberlaufLampe := FALSE;
+    END_IF
+
 ### Task6
 
 ## Quellen
